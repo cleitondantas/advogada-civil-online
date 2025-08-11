@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'heading': ['Lato', 'sans-serif'],
+				'body': ['Lato', 'sans-serif'],
+				'sans': ['Lato', 'sans-serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +57,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				navy: {
+					primary: 'hsl(var(--navy-primary))',
+					secondary: 'hsl(var(--navy-secondary))',
+					light: 'hsl(var(--navy-light))'
+				},
+				gray: {
+					primary: 'hsl(var(--gray-primary))',
+					secondary: 'hsl(var(--gray-secondary))',
+					light: 'hsl(var(--gray-light))'
+				},
+				gold: 'hsl(var(--accent-gold))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +78,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-subtle': 'var(--gradient-subtle)'
+			},
+			boxShadow: {
+				'elegant': 'var(--shadow-elegant)',
+				'soft': 'var(--shadow-soft)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'fast': 'var(--transition-fast)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
