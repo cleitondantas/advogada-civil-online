@@ -4,46 +4,19 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Carlos Eduardo Silva",
-      role: "Empresário",
-      content: "Excelente profissional! A Dra. Bruna Neri Dantas conduziu meu caso de responsabilidade civil com muita competência e transparência. Resultado excepcional.",
-      rating: 5,
-      case: "Responsabilidade Civil"
+      name: "Greyce Kelly",
+      content: "Tive alguns problemas para cancelar uma matrícula na faculdade Bookplay, a Dra. Bruna Neri foi essencial nesse processo, muito educada, inteligente e humana, soube me orientar com clareza e praticidade, uma profissional da mais exímia qualidade, a recomendo sem medo, Com certeza voltaria a utilizar seus serviços em outras situações judiciais.",
+      rating: 5
     },
     {
-      name: "Ana Paula Rodrigues",
-      role: "Administradora",
-      content: "Atendimento personalizado e humano. Me senti muito segura durante todo o processo de divórcio. Recomendo sem hesitação.",
-      rating: 5,
-      case: "Direito de Família"
+      name: "Renata Ribas",
+      content: "Uma profissional totalmente comprometida com o seu trabalho, com um atendimento excelente, esclarecendo todas as dúvidas de forma muito atenciosa, direta, clara e humana, desenvolvendo um trabalho com seriedade e competência. Obrigada por tudo Dra. Bruna!",
+      rating: 5
     },
     {
-      name: "Roberto Martins",
-      role: "Comerciante",
-      content: "Profissionalismo exemplar na elaboração dos contratos da minha empresa. Explicações claras e orientações precisas. Muito satisfeito!",
-      rating: 5,
-      case: "Contratos Empresariais"
-    },
-    {
-      name: "Fernanda Costa",
-      role: "Arquiteta",
-      content: "Processo de inventário conduzido com eficiência e agilidade. A doutora esteve presente em todos os momentos, esclarecendo cada etapa.",
-      rating: 5,
-      case: "Sucessões"
-    },
-    {
-      name: "João Pedro Oliveira",
-      role: "Engenheiro",
-      content: "Solução rápida e eficaz para uma questão contratual complexa. Comunicação excelente e resultados acima das expectativas.",
-      rating: 5,
-      case: "Análise Contratual"
-    },
-    {
-      name: "Mariana Santos",
-      role: "Médica",
-      content: "Atendimento diferenciado e dedicação integral ao meu caso. A Dra. Bruna Neri Dantas é uma profissional de extrema competência.",
-      rating: 5,
-      case: "Consultoria Jurídica"
+      name: "Ana Paula Gomes",
+      content: "Doutora Bruna, é incrível , muito competente, atenciosa e sempre a disposição para nossas dúvidas, indico quantas vezes for necessário.",
+      rating: 5
     }
   ];
 

@@ -7,22 +7,18 @@ const About = () => {
     {
       icon: GraduationCap,
       title: "Formação Acadêmica",
-      description: "Graduada em Direito pela Universidade de São Paulo (USP). Pós-graduação em Direito Civil e Processo Civil."
+      description: "Bacharelado em Direito pela Universidade Paulista."
     },
+    
     {
-      icon: Scale,
-      title: "Especialização",
-      description: "Especialista em Direito Civil, com foco em contratos, responsabilidade civil e direito de família."
+      icon: GraduationCap,
+      title: "Pós-graduação",
+      description: " Direito Processual Civil e Especialização, Proteção e Defesa do Consumidor"
     },
     {
       icon: Award,
       title: "Experiência",
       description: "Mais de 10 anos de atuação em escritórios renomados e casos de alta complexidade."
-    },
-    {
-      icon: Heart,
-      title: "Filosofia",
-      description: "Compromisso com a ética, transparência e dedicação integral aos interesses dos clientes."
     }
   ];
 

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-justice.jpg";
-import lawyerPortrait from "@/assets/lawyer-portrait2.jpg";
+import lawyerPortrait from "@/assets/bruna.png";
 
 const Hero = () => {
   return (
@@ -52,15 +52,15 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-navy-primary">10+</div>
+                <div className="text-3xl font-bold text-navy-primary">+10</div>
                 <div className="text-sm text-gray-secondary font-medium">Anos</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-navy-primary">500+</div>
+                <div className="text-3xl font-bold text-navy-primary">+50</div>
                 <div className="text-sm text-gray-secondary font-medium">Casos</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-navy-primary">98%</div>
+                <div className="text-3xl font-bold text-navy-primary">+80%</div>
                 <div className="text-sm text-gray-secondary font-medium">Sucesso</div>
               </div>
             </div>

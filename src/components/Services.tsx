@@ -23,7 +23,6 @@ const Services = () => {
         "Análise de cláusulas",
         "Negociação de termos"
       ],
-      highlight: "Mais Procurado"
     },
     {
       icon: Shield,
@@ -35,7 +34,8 @@ const Services = () => {
         "Responsabilidade médica",
         "Danos causados por produtos",
         "Indenizações trabalhistas"
-      ]
+      ],
+      highlight: "Mais Procurado"
     },
     {
       icon: Users,
