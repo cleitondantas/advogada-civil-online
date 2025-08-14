@@ -33,7 +33,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold text-lg">
-                  Dra. Maria Fernanda
+                Bruna Neri Dantas Advocacia - Civil | Consumidor 
                 </span>
                 <span className="text-sm opacity-80">
                   Advocacia Civil
@@ -99,35 +99,35 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 opacity-80" />
                 <a 
-                  href="tel:+5511999999999"
+                  href="tel:+551198709-7600"
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity duration-300"
                 >
-                  (11) 99999-9999
+                  (11) 98709-7600
                 </a>
               </div>
               
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 opacity-80" />
                 <a 
-                  href="mailto:contato@mariafernanda.adv.br"
+                  href="mailto:brunaneridantas@gmail.com"
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity duration-300"
                 >
-                  contato@mariafernanda.adv.br
+                  brunaneridantas@gmail.com
                 </a>
               </div>
               
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 opacity-80 mt-0.5" />
                 <span className="text-sm opacity-80 leading-relaxed">
-                  Rua Augusta, 123<br />
-                  Consolação, São Paulo/SP<br />
-                  CEP 01305-000
+                R. Léo de Oliveira, 33<br />
+                - Vila Moreira, GuarulhosSP<br />
+                  CEP 07021-080
                 </span>
               </div>
             </div>
 
             <a
-              href="https://wa.me/5511999999999?text=Olá, gostaria de agendar uma consulta"
+              href="https://wa.me/+5511987097609?text=Olá, gostaria de agendar uma consulta"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -147,7 +147,7 @@ const Footer = () => {
         <div className="py-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm opacity-80">
-              © {currentYear} Dra. Maria Fernanda Santos. Todos os direitos reservados.
+              © {currentYear} Dra. Bruna Neri Dantas. Todos os direitos reservados.
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 text-sm opacity-80">

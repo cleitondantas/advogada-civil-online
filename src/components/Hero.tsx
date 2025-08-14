@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-justice.jpg";
-import lawyerPortrait from "@/assets/lawyer-portrait.jpg";
+import lawyerPortrait from "@/assets/lawyer-portrait2.jpg";
 
 const Hero = () => {
   return (
@@ -31,15 +31,14 @@ const Hero = () => {
               </div>
               
               <h1 className="font-heading font-black text-4xl lg:text-6xl text-navy-primary leading-tight">
-                Dra. Maria Fernanda
+              Dra. Bruna Neri Dantas
                 <span className="block text-gray-primary font-bold text-3xl lg:text-4xl mt-2">
-                  Santos
                 </span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-secondary font-light leading-relaxed">
                 Advocacia especializada em{" "}
-                <span className="text-navy-primary font-semibold">Direito Civil</span>
+                <span className="text-navy-primary font-semibold">Direito Civil e Consumidor</span>
                 {" "}com atendimento personalizado e soluções jurídicas eficazes.
               </p>
               
@@ -101,7 +100,7 @@ const Hero = () => {
               <div className="relative bg-card rounded-2xl shadow-elegant overflow-hidden">
                 <img
                   src={lawyerPortrait}
-                  alt="Dra. Maria Fernanda Santos - Advogada Civil"
+                  alt="Bruna Neri Dantas Advocacia - Civil | Consumidor"
                   className="w-full h-auto object-cover"
                   loading="eager"
                 />

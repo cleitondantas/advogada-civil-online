@@ -36,23 +36,22 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      content: "(11) 99999-9999",
-      href: "tel:+5511999999999",
+      content: "(11) 98709-7600",
+      href: "tel:+5511987097600",
       description: "Atendimento de segunda a sexta"
     },
     {
       icon: Mail,
       title: "E-mail",
-      content: "contato@mariafernanda.adv.br",
-      href: "mailto:contato@mariafernanda.adv.br",
+      content: "brunaneridantas@gmail.com",
+      href: "mailto:brunaneridantas@gmail.com",
       description: "Resposta em até 24 horas"
     },
     {
       icon: MapPin,
       title: "Endereço",
-      content: "Rua Augusta, 123 - Consolação\nSão Paulo, SP - CEP 01305-000",
+      content: "R. Léo de Oliveira, 33 - Vila Moreira,\n Guarulhos - SP, 07021-080",
       href: "https://maps.google.com",
-      description: "Próximo ao metrô Consolação"
     },
     {
       icon: Clock,
@@ -63,8 +62,6 @@ const Contact = () => {
   ];
 
   const features = [
-    "Resposta em até 24 horas",
-    "Primeira consulta sem compromisso",
     "Atendimento presencial e online",
     "Orçamento personalizado",
   ];
@@ -146,7 +143,7 @@ const Contact = () => {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/5511999999999?text=Olá, gostaria de agendar uma consulta"
+              href="https://wa.me/+5511987097600?text=Olá, gostaria de agendar uma consulta"
               target="_blank"
               rel="noopener noreferrer"
               className="block"
@@ -202,7 +199,7 @@ const Contact = () => {
                         Telefone *
                       </label>
                       <Input 
-                        placeholder="(11) 99999-9999"
+                        placeholder="(11) 98709-7600"
                         required
                         className="border-gray-light focus:border-navy-primary"
                       />
@@ -273,7 +270,7 @@ const Contact = () => {
                   Localização do Escritório
                 </h3>
                 <p className="text-gray-secondary">
-                  Rua Augusta, 123 - Consolação, São Paulo/SP
+                    R. Léo de Oliveira, 33 - Vila Moreira, Guarulhos - SP, 07021-080
                 </p>
                 <a 
                   href="https://maps.google.com"

@@ -27,10 +27,10 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-bold text-lg text-navy-primary">
-                Dra. Maria Fernanda
+              Bruna Neri Dantas
               </span>
               <span className="text-xs text-gray-secondary font-medium">
-                Advocacia Civil
+                Advocacia Civil & Consumidor
               </span>
             </div>
           </div>
@@ -50,14 +50,14 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+5511999999999">
+            <a href="tel:+551198709-7600">
               <Button variant="outline" size="sm" className="gap-2">
                 <Phone className="h-4 w-4" />
-                (11) 99999-9999
+                (11) 98709-7600
               </Button>
             </a>
             <a
-              href="https://wa.me/5511999999999?text=Olá, gostaria de agendar uma consulta"
+              href="https://wa.me/+5511987097600?text=Olá, gostaria de agendar uma consulta"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -102,14 +102,14 @@ const Header = () => {
               </a>
             ))}
             <div className="pt-4 space-y-3">
-              <a href="tel:+5511999999999" className="block">
+              <a href="tel:+551198709-7600" className="block">
                 <Button variant="outline" size="sm" className="w-full gap-2">
                   <Phone className="h-4 w-4" />
-                  (11) 99999-9999
+                  (11) 98709-7600
                 </Button>
               </a>
               <a
-                href="https://wa.me/5511999999999?text=Olá, gostaria de agendar uma consulta"
+                href="https://wa.me/+5511987097600?text=Olá, gostaria de agendar uma consulta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"

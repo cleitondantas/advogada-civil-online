@@ -6,7 +6,7 @@ const Testimonials = () => {
     {
       name: "Carlos Eduardo Silva",
       role: "Empresário",
-      content: "Excelente profissional! A Dra. Maria Fernanda conduziu meu caso de responsabilidade civil com muita competência e transparência. Resultado excepcional.",
+      content: "Excelente profissional! A Dra. Bruna Neri Dantas conduziu meu caso de responsabilidade civil com muita competência e transparência. Resultado excepcional.",
       rating: 5,
       case: "Responsabilidade Civil"
     },
@@ -41,7 +41,7 @@ const Testimonials = () => {
     {
       name: "Mariana Santos",
       role: "Médica",
-      content: "Atendimento diferenciado e dedicação integral ao meu caso. A Dra. Maria Fernanda é uma profissional de extrema competência.",
+      content: "Atendimento diferenciado e dedicação integral ao meu caso. A Dra. Bruna Neri Dantas é uma profissional de extrema competência.",
       rating: 5,
       case: "Consultoria Jurídica"
     }
@@ -126,15 +126,15 @@ const Testimonials = () => {
         <div className="bg-gradient-primary rounded-3xl p-12 text-primary-foreground">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-4xl font-bold">500+</div>
+              <div className="text-4xl font-bold">+50</div>
               <div className="text-lg opacity-90">Casos Resolvidos</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold">98%</div>
+              <div className="text-4xl font-bold">+80%</div>
               <div className="text-lg opacity-90">Taxa de Sucesso</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold">10+</div>
+              <div className="text-4xl font-bold">+10</div>
               <div className="text-lg opacity-90">Anos de Experiência</div>
             </div>
             <div className="space-y-2">

@@ -48,31 +48,8 @@ const Services = () => {
         "União estável",
         "Adoção"
       ]
-    },
-    {
-      icon: Home,
-      title: "Sucessões",
-      description: "Inventários e partilhas de bens com agilidade e segurança.",
-      features: [
-        "Inventário judicial",
-        "Inventário extrajudicial",
-        "Testamentos",
-        "Partilha de bens",
-        "Sucessão empresarial"
-      ]
-    },
-    {
-      icon: Briefcase,
-      title: "Direito Empresarial",
-      description: "Assessoria jurídica completa para empresas e empresários.",
-      features: [
-        "Constituição de empresas",
-        "Contratos empresariais",
-        "Recuperação judicial",
-        "Dissolução societária",
-        "Compliance empresarial"
-      ]
     }
+
   ];
 
   return (
@@ -174,7 +151,7 @@ const Services = () => {
               </Button>
             </a>
             <a 
-              href="https://wa.me/5511999999999?text=Olá, gostaria de saber mais sobre os serviços jurídicos"
+              href="https://wa.me/+5511987097600?text=Olá, gostaria de saber mais sobre os serviços jurídicos"
               target="_blank"
               rel="noopener noreferrer"
             >

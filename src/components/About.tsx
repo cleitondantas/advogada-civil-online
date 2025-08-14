@@ -44,7 +44,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 bg-navy-primary/10 text-navy-primary px-4 py-2 rounded-full text-sm font-medium">
                 <Scale className="h-4 w-4" />
-                Sobre a Dra. Maria Fernanda
+                Sobre a Dra. Bruna Neri Dantas
               </div>
               
               <h2 className="font-heading font-bold text-3xl lg:text-5xl text-navy-primary leading-tight">
