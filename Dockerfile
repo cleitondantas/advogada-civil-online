@@ -3,7 +3,7 @@
 ############################
 # Etapa de build (Vite)
 ############################
-FROM --platform=$BUILDPLATFORM node:20-alpine AS builder
+FROM --platform=linux/arm64 node:20-alpine AS builder
 WORKDIR /app
 
 # Instala dependências com base no lockfile para builds reprodutíveis
@@ -17,7 +17,7 @@ RUN npm run build
 ############################
 # Etapa de runtime (Nginx)
 ############################
-FROM --platform=$TARGETPLATFORM nginx:1.27-alpine AS runner
+FROM --platform=linux/arm64 nginx:1.27-alpine AS runner
 
 # Configuração do Nginx para SPA (fallback para index.html)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
