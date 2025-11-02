@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 import { 
   MapPin, 
   Phone, 
@@ -14,22 +15,96 @@ import {
   CheckCircle 
 } from "lucide-react";
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  area: string;
+  message: string;
+}
+
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    phone: "",
+    area: "",
+    message: "",
+  });
   const { toast } = useToast();
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      // Validação básica
+      if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+        throw new Error("Por favor, preencha todos os campos obrigatórios.");
+      }
+
+      // Obter credenciais do EmailJS das variáveis de ambiente
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const receiverEmail = import.meta.env.VITE_EMAILJS_RECEIVER_EMAIL || "brunaneridantas@gmail.com";
+
+      // Verificar se as credenciais estão configuradas
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error(
+          "Configuração de email não encontrada. Por favor, configure as variáveis de ambiente do EmailJS."
+        );
+      }
+
+      // Preparar template parameters para EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        area: formData.area || "Não especificado",
+        message: formData.message,
+        to_email: receiverEmail,
+      };
+
+      // Enviar email usando EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      // Limpar formulário após envio bem-sucedido
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        area: "",
+        message: "",
+      });
+
       toast({
         title: "Mensagem enviada com sucesso!",
         description: "Retornaremos o contato em até 24 horas.",
       });
-    }, 2000);
+    } catch (error) {
+      console.error("Erro ao enviar mensagem:", error);
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: error instanceof Error 
+          ? error.message 
+          : "Ocorreu um erro. Por favor, tente novamente ou entre em contato pelo telefone.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -175,6 +250,9 @@ const Contact = () => {
                         Nome Completo *
                       </label>
                       <Input 
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         placeholder="Seu nome completo"
                         required
                         className="border-gray-light focus:border-navy-primary"
@@ -185,7 +263,10 @@ const Contact = () => {
                         E-mail *
                       </label>
                       <Input 
+                        name="email"
                         type="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="seu@email.com"
                         required
                         className="border-gray-light focus:border-navy-primary"
@@ -199,6 +280,9 @@ const Contact = () => {
                         Telefone *
                       </label>
                       <Input 
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
                         placeholder="(11) 98709-7600"
                         required
                         className="border-gray-light focus:border-navy-primary"
@@ -208,7 +292,12 @@ const Contact = () => {
                       <label className="text-sm font-medium text-gray-primary">
                         Área de Interesse
                       </label>
-                      <select className="w-full h-10 px-3 rounded-md border border-gray-light bg-background text-gray-primary focus:border-navy-primary focus:outline-none">
+                      <select 
+                        name="area"
+                        value={formData.area}
+                        onChange={handleChange}
+                        className="w-full h-10 px-3 rounded-md border border-gray-light bg-background text-gray-primary focus:border-navy-primary focus:outline-none"
+                      >
                         <option value="">Selecione uma área</option>
                         <option value="contratos">Contratos</option>
                         <option value="responsabilidade">Responsabilidade Civil</option>
@@ -225,6 +314,9 @@ const Contact = () => {
                       Mensagem *
                     </label>
                     <Textarea 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       placeholder="Descreva brevemente sua necessidade jurídica..."
                       rows={5}
                       required
