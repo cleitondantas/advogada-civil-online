@@ -37,7 +37,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copia artefatos do build
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 8080
 
 # Comando padrão do Nginx
 CMD ["nginx", "-g", "daemon off;"]
