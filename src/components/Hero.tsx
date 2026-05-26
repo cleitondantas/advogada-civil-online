@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-justice.jpg";
 import lawyerPortrait from "@/assets/bruna.png";
+import { siteConfig } from "@/lib/site-config";
 
 const Hero = () => {
   return (
@@ -100,9 +101,12 @@ const Hero = () => {
               <div className="relative bg-card rounded-2xl shadow-elegant overflow-hidden">
                 <img
                   src={lawyerPortrait}
-                  alt="Bruna Neri Dantas Advocacia - Civil | Consumidor"
+                  alt="Dra. Bruna Neri Dantas - Advogada de Direito Civil e Consumidor em Guarulhos"
                   className="w-full h-auto object-cover"
+                  width={600}
+                  height={750}
                   loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             </div>

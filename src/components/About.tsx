@@ -85,9 +85,12 @@ const About = () => {
               <div className="relative bg-card rounded-2xl shadow-elegant overflow-hidden">
                 <img
                   src={officeImage}
-                  alt="Escritório de Advocacia - Ambiente Profissional"
+                  alt="Escritório de advocacia da Dra. Bruna Neri Dantas em Guarulhos"
                   className="w-full h-auto object-cover"
+                  width={800}
+                  height={600}
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

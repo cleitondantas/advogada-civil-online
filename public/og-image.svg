@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Bruna Neri Dantas Advocacia">
+  <rect width="1200" height="630" fill="#1e3a5f"/>
+  <rect x="60" y="60" width="1080" height="510" rx="24" fill="#2d4a6f" stroke="#c9a227" stroke-width="4"/>
+  <text x="600" y="260" fill="#ffffff" font-family="Georgia, serif" font-size="56" font-weight="bold" text-anchor="middle">Bruna Neri Dantas</text>
+  <text x="600" y="330" fill="#e8dcc8" font-family="Arial, sans-serif" font-size="36" text-anchor="middle">Advocacia Civil e Consumidor</text>
+  <text x="600" y="400" fill="#a8c0d8" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Guarulhos/SP · +10 anos de experiência</text>
+  <text x="600" y="480" fill="#c9a227" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">brunaneridantas.adv.br</text>
+</svg>
