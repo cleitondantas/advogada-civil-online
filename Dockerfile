@@ -9,9 +9,12 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
+# Vite/Tailwind/TypeScript ficam em devDependencies — precisam ser instalados no build
+ENV NODE_ENV=development
+
 # Instala dependências com base no lockfile para builds reprodutíveis
 COPY package*.json ./
-RUN npm ci --no-audit --no-fund
+RUN npm ci --no-audit --no-fund --include=dev
 
 # Copia o restante do código e gera o build
 COPY . .
