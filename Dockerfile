@@ -2,24 +2,35 @@
 #
 # Build multi-arquitetura (amd64 + arm64):
 #   docker buildx build --platform linux/amd64,linux/arm64 -t cleitonpanao/advogada-civil-online:latest --push .
+#
+# Se arm64 falhar por memória/emulação, teste só amd64:
+#   docker buildx build --platform linux/amd64 -t cleitonpanao/advogada-civil-online:latest --push .
 
 ############################
 # Etapa de build (Vite)
 ############################
-FROM node:20-alpine AS builder
+FROM node:20-bookworm-slim AS builder
 WORKDIR /app
 
-# Vite/Tailwind/TypeScript ficam em devDependencies
-ENV NODE_ENV=development
+ENV NODE_ENV=development \
+    CI=true \
+    npm_config_audit=false \
+    npm_config_fund=false
 
-# Copia o projeto (node_modules está no .dockerignore)
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends ca-certificates \
+  && rm -rf /var/lib/apt/lists/*
+
+# Manifests primeiro (melhor cache + garante lockfile no contexto)
+COPY package.json package-lock.json ./
+
+RUN npm ci --include=dev \
+  && test -x node_modules/.bin/vite
+
+# Código-fonte (node_modules excluído via .dockerignore)
 COPY . .
 
-# Instala deps e builda na mesma etapa para evitar sobrescrita de node_modules
-RUN rm -rf node_modules \
-  && npm ci --no-audit --no-fund --include=dev \
-  && ./node_modules/.bin/vite build \
-  && npm cache clean --force
+RUN npm run build
 
 ############################
 # Etapa de runtime (Nginx)
